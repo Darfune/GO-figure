@@ -46,4 +46,10 @@ func main(){
 		min6
 	)
 	fmt.Println(min4, min5, min6)
+
+	const temp int = 50
+	// can't init const on run time
+
+	const lenght = len('hello world") // len is compile run time function,soo this won't cause an error
+
 }
