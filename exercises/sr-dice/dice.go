@@ -25,13 +25,13 @@ import (
 func main() {
 	source := rand.NewSource(time.Now().UnixNano())
 	rng := rand.New(source)
-
+	var sides = 12
 	var diceNum = 2
 
 	for i := 1; i <= 10; i++ {
 		var total = 0
 		for dice := 1; dice <= diceNum; dice++ {
-			total += rng.Intn(7)
+			total += rng.Intn(sides + 1)
 		}
 		switch {
 		case total == 2 && diceNum == 2:
@@ -46,6 +46,5 @@ func main() {
 		}
 		fmt.Println("->", total)
 	}
-	
 
 }
